@@ -13,18 +13,25 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
     <link rel="stylesheet" href="dist/theme/dracula.css" />
-
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"> </script
   </head>
 
   <body>
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1>Computer Arithmetic</h1>
-          <h2>And</h2>
-          <h1>Digital Logic</h1>
+          <h2>Computer Arithmetic</h2>
+          <h3>And</h3>
+          <h2>Digital Logic</h2>
+          <div id="qrcode"></div>
+          <script type="text/javascript">
+              new QRCode(
+                document.getElementById("qrcode"),
+                "https://computer-logic-presentation.web.app/",
+              );
+          </script>
         </section>
         <section data-markdown>
           <textarea data-template>
@@ -270,7 +277,7 @@
                     }
                   </code>
                 </pre>
-                <input id="tobin-input" />
+                <input id="tobin-input" placeholder="decimal input here" pattern="[0-9]*" />
               </div>
               <div>
                 <pre>
@@ -285,7 +292,7 @@
                     }
                   </code>
                 </pre>
-                <input id="frombin-input" />
+                <input id="frombin-input" placeholder="binary input here" pattern="[01]*" />
               </div>
               <script>
                 let toBinInput = document.getElementById("tobin-input");

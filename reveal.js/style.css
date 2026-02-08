@@ -54,3 +54,14 @@ input {
   font-size: 1.3rem;
   min-width: 35ch;
 }
+
+#qrcode {
+  display: flex;
+  justify-content: center;
+}
+
+#qrcode img {
+  padding: 0.2em;
+  border: solid 7px var(--magenta);
+  border-radius: 1em;
+}
