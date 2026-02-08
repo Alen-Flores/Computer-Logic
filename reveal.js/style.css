@@ -1,0 +1,56 @@
+:root {
+  --red: #FF5555;
+  --orange: #FFB86C;
+  --yellow: #F1FA8C;
+  --green: #50FA7B;
+  --cyan: #8BE9FD;
+  --violet: #BD93F9;
+  --magenta: #FF79C6;
+  --comment: #6272A4;
+}
+
+.red-color {
+  color: var(--red);
+}
+
+.orange-color {
+  color: var(--orange);
+}
+
+.yellow-color {
+  color: var(--yellow);
+}
+
+.green-color {
+  color: var(--green);
+}
+
+.cyan-color {
+  color: var(--cyan);
+}
+
+.side-window {
+  position: absolute;
+  top: 0;
+  right: -4em;
+  font-size: 2rem;
+  max-height: 50vh;
+  overflow: scroll;
+  color: var(--comment);
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+input {
+  background-color: #44475A;
+  border: none;
+  outline: none;
+  color: var(--r-main-color);
+  padding: 0.5em;
+  font-size: 1.3rem;
+  min-width: 35ch;
+}

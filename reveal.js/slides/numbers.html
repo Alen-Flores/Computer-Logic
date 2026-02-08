@@ -1,0 +1,244 @@
+<section>
+  <h1>Numbers</h1>
+  Numbers are all stored in binary, each addressable unit in memory is
+  representable with an integer value.
+  <pre>
+            <code data-trim data-noescape>
+              0x7ffcf5171838 │ 32
+              0x7ffcf5171840 │ 52
+              0x7ffcf517183c │ 203
+            </code>
+          </pre>
+</section>
+<section data-markdown>
+  <textarea data-template>
+            ### Representation of Numbers
+            While Computers work only in binary, numbers are represented in other number systems for conciseness and
+            clarity.
+          </textarea
+  >
+</section>
+<section>
+  <h3>Binary, Octal, and Hexidecimal</h3>
+  Binary is the number system computers use internally. Octal and Hexadecimal
+  are more concise alternatives which have trivial conversions.
+  <hr />
+  <div class="fragment">
+    <small>
+      Digits in these 3 number systems has a number of states equal to a power
+      of 2.
+    </small>
+
+    <ul>
+      <li>Binary $\implies$ $2^1$ states per digit.</li>
+      <li>Octal $\implies$ $2^3$ states per digit.</li>
+      <li>Hexadecimal $\implies$ $2^4$ states per digit.</li>
+    </ul>
+  </div>
+</section>
+<section>
+  <h3>Binary and Octal</h3>
+  <table>
+    <tr>
+      <th>Binary</th>
+      <th>Octal</th>
+    </tr>
+    <tr>
+      <td>
+        <code>
+          <span class="cyan-color">110</span><span class="green-color">100</span
+          ><span class="yellow-color">001</span
+          ><span class="red-color">010</span>
+        </code>
+      </td>
+      <td class="fragment fade-right">
+        <code>
+          <span class="cyan-color">6</span><span class="green-color">4</span
+          ><span class="yellow-color">1</span
+          ><span class="red-color">2</span></code
+        >$_8$
+      </td>
+    </tr>
+  </table>
+  <div class="side-window">
+    <table>
+      <tr>
+        <td>000$_2$</td>
+        <td>0$_8$</td>
+      </tr>
+      <tr>
+        <td>001$_2$</td>
+        <td>1$_8$</td>
+      </tr>
+      <tr>
+        <td>010$_2$</td>
+        <td>2$_8$</td>
+      </tr>
+      <tr>
+        <td>011$_2$</td>
+        <td>3$_8$</td>
+      </tr>
+      <tr>
+        <td>011$_2$</td>
+        <td>3$_8$</td>
+      </tr>
+      <tr>
+        <td>100$_2$</td>
+        <td>4$_8$</td>
+      </tr>
+      <tr>
+        <td>101$_2$</td>
+        <td>5$_8$</td>
+      </tr>
+      <tr>
+        <td>110$_2$</td>
+        <td>6$_8$</td>
+      </tr>
+      <tr>
+        <td>111$_2$</td>
+        <td>7$_8$</td>
+      </tr>
+    </table>
+  </div>
+  <p>Octal has a radix of 8, which is $2^3$</p>
+</section>
+<section>
+  <h3>Binary and Hexadecimal</h3>
+  <table>
+    <tr>
+      <th>Binary</th>
+      <th>Hexadecimal</th>
+    </tr>
+    <tr>
+      <td>
+        <code>
+          <span class="green-color">1101</span
+          ><span class="yellow-color">0000</span
+          ><span class="red-color">1010</span></code
+        >
+      </td>
+      <td class="fragment fade-right">
+        <code>
+          <span class="green-color">D</span><span class="yellow-color">0</span
+          ><span class="red-color">A</span></code
+        >$_{16}$
+      </td>
+    </tr>
+  </table>
+  <div class="side-window">
+    <table>
+      <tr>
+        <td>0000$_2$</td>
+        <td>0$_{16}$</td>
+      </tr>
+      <tr>
+        <td>0001$_2$</td>
+        <td>1$_{16}$</td>
+      </tr>
+      <tr>
+        <td>0010$_2$</td>
+        <td>2$_{16}$</td>
+      </tr>
+      <tr>
+        <td>0011$_2$</td>
+        <td>3$_{16}$</td>
+      </tr>
+      <tr>
+        <td>0011$_2$</td>
+        <td>3$_{16}$</td>
+      </tr>
+      <tr>
+        <td>0100$_2$</td>
+        <td>4$_{16}$</td>
+      </tr>
+      <tr>
+        <td>0101$_2$</td>
+        <td>5$_{16}$</td>
+      </tr>
+      <tr>
+        <td>0110$_2$</td>
+        <td>6$_{16}$</td>
+      </tr>
+      <tr>
+        <td>0111$_2$</td>
+        <td>7$_{16}$</td>
+      </tr>
+      <tr>
+        <td>1000$_2$</td>
+        <td>8$_{16}$</td>
+      </tr>
+      <tr>
+        <td>1001$_2$</td>
+        <td>9$_{16}$</td>
+      </tr>
+      <tr>
+        <td>1010$_2$</td>
+        <td>10$_{16}$</td>
+      </tr>
+      <tr>
+        <td>1011$_2$</td>
+        <td>11$_{16}$</td>
+      </tr>
+      <tr>
+        <td>1011$_2$</td>
+        <td>11$_{16}$</td>
+      </tr>
+      <tr>
+        <td>1100$_2$</td>
+        <td>12$_{16}$</td>
+      </tr>
+      <tr>
+        <td>1101$_2$</td>
+        <td>13$_{16}$</td>
+      </tr>
+      <tr>
+        <td>1110$_2$</td>
+        <td>14$_{16}$</td>
+      </tr>
+      <tr>
+        <td>1111$_2$</td>
+        <td>15$_{16}$</td>
+      </tr>
+    </table>
+  </div>
+  <p>Hexadecimal has a radix of 16, which is $2^4$</p>
+</section>
+<section>
+  <h2>Decimal Numbers</h2>
+  <p>
+    Decimal numbers have a more involved process requiring repeat divisions to
+    convert to and from binary.
+  </p>
+  <div class="two-column">
+    <div>
+      <pre>
+        <code data-trim data-noescape class="language-cpp">
+          function toBinary(n) {
+            out = "";
+            while (n != 0) {
+              out = `${n % 2}` + out;
+              n = Math.floor(n / 2);
+            }
+            return out;
+          }
+        </code>
+      </pre>
+      <input id="tobin-input" />
+    </div>
+    <div>
+      <pre>
+        <code data-trim data-noescape class="language-cpp">
+          function fromBinary(bin) {
+            let n = 0;
+            for (let i = bin.length - 1; i >= 0; i--) {
+              if (bin[bin.length - i - 1] == "1")
+                n += Math.pow(2, i);
+            }
+            return n;
+          }
+        </code>
+      </pre>
+      <input id="frombin-input" />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,111 @@
+<section>
+  <h1>Data</h1>
+  Data refers to raw facts and values that a computer can store, process, and output.
+</section>
+<section data-markdown>
+  <textarea data-template>
+    ## Computers use binary to represent data
+
+    Their usage traces back to 1679 by *Gottfried Leibniz*, which introduced the binary-decimal conversion and
+    binary arithmetic.
+
+    <table class="binary-table">
+      <tr>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>$2^{10}$</td>
+        <td>$2^{9}$</td>
+        <td>$2^{8}$</td>
+        <td>$2^{7}$</td>
+        <td>$2^{6}$</td>
+        <td>$2^{5}$</td>
+        <td>$2^{4}$</td>
+        <td>$2^{3}$</td>
+        <td>$2^{2}$</td>
+        <td>$2^{1}$</td>
+        <td>$2^{0}$</td>
+      </tr>
+    </table>
+  </textarea>
+</section>
+<section data-markdown>
+  <textarea data-template>
+    ## Computers use binary to represent data
+
+    Later developements were made by *George Boole* in 1854. Forming an algebraic system of logic: "Boolean
+    Algebra".
+  </textarea>
+</section>
+<section data-markdown>
+  <textarea data-template>
+    ## Binary is Simple
+
+    Binary was preferred over other number systems due to the simplicity of the format.
+  </textarea>
+</section>
+<section data-markdown>
+  <textarea data-template>
+    ## Binary is Simple
+
+    Components need only 2 states to manage, a higher number of components may introduce complexity and
+    ambiguity.
+
+    - High or low voltage
+    - Magnetic Polarity
+    - Present or not Present
+  </textarea>
+</section>
+<section data-markdown>
+  <textarea data-template>
+    ## Binary is Simple
+
+    Within binary logic, there exists:
+    - Only 1 possible unary operation ($\lnot$).
+    - Only 4 possible states between 2 numbers.
+    - Only 16 possible binary operations.
+
+    8 Common ones:
+
+    `AND, OR, XOR, NAND, NOR, XNOR, CONST 1, CONST 0`
+
+    <small> (The remaining 8 are rarely used and are not named). </small>
+
+  </textarea>
+</section>
+<section>
+  <h2>Binary is Simple</h2>
+  <p>- And only 1 required gate to build all other gates:</p>
+  <br>
+  <small>
+    \[
+    \begin{aligned}
+    \lnot A &amp;= \text{NAND}(A,A) \\
+    A \land B &amp;= \text{NAND}(NAND(A,B),NAND(A,B)) \\
+    A \lor B &amp;= \text{NAND}(\lnot A, \lnot B) \\
+    A \oplus B &amp;= (A \lor B) \land \text{NAND}(A,A) \\
+    \end{aligned}
+    \]
+  </small>
+</section>
+<section data-markdown>
+  <textarea data-template>
+    ## Binary is Simple
+
+    This allows for a smaller set of components, significantly simplifying assembly.
+
+    It is viable to just use NAND gates and the constructions of it in architecture.
+  </textarea>
+</section>
+<section data-background-iframe="https://www.nand2tetris.org/" data-background-interactive>
+</section>
