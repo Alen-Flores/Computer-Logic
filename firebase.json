@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "./reveal.js",
     "ignore": [
       "firebase.json",
       "**/.*",
