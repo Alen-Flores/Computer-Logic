@@ -1,8 +1,9 @@
 <section>
   <h1>Data</h1>
-  Data refers to raw facts and values that a computer can store, process, and output.
+  Data refers to raw facts and values that a computer can store, process, and
+  output.
 </section>
-<section data-markdown>
+<section data-markdown data-auto-animate>
   <textarea data-template>
     ## Computers use binary to represent data
 
@@ -39,7 +40,7 @@
     </table>
   </textarea>
 </section>
-<section data-markdown>
+<section data-markdown data-auto-animate>
   <textarea data-template>
     ## Computers use binary to represent data
 
@@ -47,14 +48,14 @@
     Algebra".
   </textarea>
 </section>
-<section data-markdown>
+<section data-markdown data-auto-animate>
   <textarea data-template>
     ## Binary is Simple
 
     Binary was preferred over other number systems due to the simplicity of the format.
   </textarea>
 </section>
-<section data-markdown>
+<section data-markdown data-auto-animate>
   <textarea data-template>
     ## Binary is Simple
 
@@ -66,7 +67,7 @@
     - Present or not Present
   </textarea>
 </section>
-<section data-markdown>
+<section data-markdown data-auto-animate>
   <textarea data-template>
     ## Binary is Simple
 
@@ -83,29 +84,60 @@
 
   </textarea>
 </section>
-<section>
+<section data-auto-animate>
+  <h2>Binary is Simple</h2>
+  <input id="table-gen" />
+  <div id="truth-table"></div>
+  <script>
+    let tableInput = document.getElementById("table-gen");
+    let truthTable = document.getElementById("truth-table");
+    tableInput.addEventListener("input", () => {
+      truthTable.innerHTML = `
+    <table>
+      <tr>
+        <th>foo</th>
+      </tr>
+      <tr>
+        <td>Bar</td>
+      </tr>
+    </table>
+    `;
+    });
+  </script>
+</section>
+<section data-auto-animate>
   <h2>Binary is Simple</h2>
   <p>- And only 1 required gate to build all other gates:</p>
-  <br>
+  <br />
   <small>
-    \[
-    \begin{aligned}
-    \lnot A &amp;= \text{NAND}(A,A) \\
-    A \land B &amp;= \text{NAND}(NAND(A,B),NAND(A,B)) \\
-    A \lor B &amp;= \text{NAND}(\lnot A, \lnot B) \\
-    A \oplus B &amp;= (A \lor B) \land \text{NAND}(A,A) \\
-    \end{aligned}
-    \]
+    \[ \begin{aligned} \lnot A &amp;= \text{NAND}(A,A) \\ A \land B &amp;=
+    \text{NAND}(NAND(A,B),NAND(A,B)) \\ A \lor B &amp;= \text{NAND}(\lnot A,
+    \lnot B) \\ A \oplus B &amp;= (A \lor B) \land \text{NAND}(A,A) \\
+    \end{aligned} \]
   </small>
 </section>
-<section data-markdown>
+<section data-markdown data-auto-animate>
   <textarea data-template>
     ## Binary is Simple
 
     This allows for a smaller set of components, significantly simplifying assembly.
 
-    It is viable to just use NAND gates and the constructions of it in architecture.
+    It is viable to just use NAND gates to construct all other logic gates
   </textarea>
 </section>
-<section data-background-iframe="https://www.nand2tetris.org/" data-background-interactive>
+<section>
+  <div class="">$$ \text{NOT}(A) = \text{NAND}(A,A)$$</div>
+  <div class="fragment">
+    $$ \text{AND}(A,B) = \text{NOT}(\text{AND}(A,B)))$$
+  </div>
+  <div class="fragment">
+    $$ \text{OR}(A,B) = \text{NAND}(\text{NOT}(A), \text{NOT}(B)))$$
+  </div>
+  <div class="fragment">
+    $$ \text{XOR}(A,B) = \text{AND}(\text{OR}(A,B), \text{NAND}(A,B))$$
+  </div>
 </section>
+<section
+  data-background-iframe="https://www.nand2tetris.org/"
+  data-background-interactive
+></section>

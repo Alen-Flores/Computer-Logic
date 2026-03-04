@@ -10,12 +10,27 @@
     <title>Computer Arithmetic and Digital Logic</title>
 
     <link rel="stylesheet" href="dist/reset.css" />
-    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
     <link rel="stylesheet" href="dist/theme/dracula.css" />
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.7.7/joint.min.js"></script>
+    <script src="https://tilk.github.io/digitaljs/main.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.7.7/joint.css"
+    />
+
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"> </script
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
@@ -26,13 +41,15 @@
           <h3>And</h3>
           <h2>Digital Logic</h2>
           <div id="qrcode"></div>
-          <script type="text/javascript">
-              new QRCode(
-                document.getElementById("qrcode"),
-                "https://computer-logic-presentation.web.app/",
-              );
+          <script>
+            new QRCode(
+              document.getElementById("qrcode"),
+              "https://computer-logic-presentation.web.app/",
+            );
           </script>
+          <small>Use landscape mode on mobile</small>
         </section>
+
         <section data-markdown>
           <textarea data-template>
           # Group 5
@@ -43,10 +60,140 @@
           Marlon Alen I. Flores
 
           Angelie Saccuan
-        </textarea
-          >
+          </textarea>
         </section>
-        <section data-external="./slides/data.html"></section>
+
+        <section>
+          <section>
+            <h1>Data</h1>
+            Data refers to raw facts and values that a computer can store,
+            process, and output.
+          </section>
+          <section data-markdown data-auto-animate>
+            <textarea data-template>
+              ## Computers use binary to represent data
+
+              Their usage traces back to 1679 by *Gottfried Leibniz*, which introduced the binary-decimal conversion and
+              binary arithmetic.
+
+              <table class="binary-table">
+                <tr>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>$2^{10}$</td>
+                  <td>$2^{9}$</td>
+                  <td>$2^{8}$</td>
+                  <td>$2^{7}$</td>
+                  <td>$2^{6}$</td>
+                  <td>$2^{5}$</td>
+                  <td>$2^{4}$</td>
+                  <td>$2^{3}$</td>
+                  <td>$2^{2}$</td>
+                  <td>$2^{1}$</td>
+                  <td>$2^{0}$</td>
+                </tr>
+              </table>
+            </textarea>
+          </section>
+          <section data-markdown data-auto-animate>
+            <textarea data-template>
+              ## Computers use binary to represent data
+
+              Later developements were made by *George Boole* in 1854. Forming an algebraic system of logic: "Boolean
+              Algebra".
+            </textarea>
+          </section>
+          <section data-markdown data-auto-animate>
+            <textarea data-template>
+              ## Binary is Simple
+
+              Binary was preferred over other number systems due to the simplicity of the format.
+            </textarea>
+          </section>
+          <section data-markdown data-auto-animate>
+            <textarea data-template>
+              ## Binary is Simple
+
+              Components need only 2 states to manage, a higher number of components may introduce complexity and
+              ambiguity.
+
+              - High or low voltage
+              - Magnetic Polarity
+              - Present or not Present
+            </textarea>
+          </section>
+          <section data-markdown data-auto-animate>
+            <textarea data-template>
+              ## Binary is Simple
+
+              Within binary logic, there exists:
+              - Only 1 possible unary operation ($\lnot$).
+              - Only 4 possible states between 2 numbers.
+              - Only 16 possible binary operations.
+
+              8 Common ones:
+
+              `AND, OR, XOR, NAND, NOR, XNOR, CONST 1, CONST 0`
+
+              <small> (The remaining 8 are rarely used and are not named). </small>
+
+            </textarea>
+          </section>
+          <section data-auto-animate>
+            <h2>Binary is Simple</h2>
+            <form id="table-gen">
+              <input type="text" name="expression" />
+            </form>
+            <table id="truth-table"></table>
+            <script src="./slides/truth-table.js"></script>
+          </section>
+          <section data-auto-animate>
+            <h2>Binary is Simple</h2>
+            <p>- And only 1 required gate to build all other gates:</p>
+            <br />
+            \[ \begin{aligned} NOT(A) &amp;= \text{NAND}(A,A) \\ AND(A,B) &amp;=
+            \text{NAND}(NAND(A , B),NAND(A,B)) \\ OR(A,B) &amp;=
+            \text{NAND}(NOT(A), NOT(B)) \\ XOR(A,B) &amp;= AND(OR(A,B),
+            \text{NAND}(A,A) \\ \end{aligned} \]
+          </section>
+          <section data-markdown data-auto-animate>
+            <textarea data-template>
+              ## Binary is Simple
+
+              This allows for a smaller set of components, significantly simplifying assembly.
+
+              It is viable to just use NAND gates to construct all other logic gates
+            </textarea>
+          </section>
+          <section>
+            <div class="">$$ \text{NOT}(A) = \text{NAND}(A,A)$$</div>
+            <div class="fragment">
+              $$ \text{AND}(A,B) = \text{NOT}(\text{AND}(A,B)))$$
+            </div>
+            <div class="fragment">
+              $$ \text{OR}(A,B) = \text{NAND}(\text{NOT}(A), \text{NOT}(B)))$$
+            </div>
+            <div class="fragment">
+              $$ \text{XOR}(A,B) = \text{AND}(\text{OR}(A,B),
+              \text{NAND}(A,B))$$
+            </div>
+          </section>
+          <section
+            data-background-iframe="https://www.nand2tetris.org/"
+            data-background-interactive
+          ></section>
+        </section>
         <section>
           <section>
             <h1>Numbers</h1>
@@ -277,7 +424,11 @@
                     }
                   </code>
                 </pre>
-                <input id="tobin-input" placeholder="decimal input here" pattern="[0-9]*" />
+                <input
+                  id="tobin-input"
+                  placeholder="decimal input here"
+                  pattern="[0-9]*"
+                />
               </div>
               <div>
                 <pre>
@@ -292,7 +443,11 @@
                     }
                   </code>
                 </pre>
-                <input id="frombin-input" placeholder="binary input here" pattern="[01]*" />
+                <input
+                  id="frombin-input"
+                  placeholder="binary input here"
+                  pattern="[01]*"
+                />
               </div>
               <script>
                 let toBinInput = document.getElementById("tobin-input");
@@ -328,7 +483,602 @@
         </section>
         <section>
           <section>
-            <h2>Integers</h2>
+            <h1>Integers</h1>
+            Integers are numbers which represent a single whole number, either
+            positive or negative.
+          </section>
+          <section data-markdown data-auto-animate>
+            <textarea data-template>
+              <h2>Unsigned Integers</h2>
+              Unsigned integers are the simplest model of numbers, their value has a direct correspondence with their binary representation.
+
+              A standard 32-bit <code>uint</code> can be any value in the range `0...4294967295`
+            </textarea>
+          </section>
+          <section data-markdown data-auto-animate>
+            <textarea data-template>
+              <h2>Unsigned Integers</h2>
+              Pointers are all stored as unsigned integers, representing a memory address. 
+
+              A pointer can either be 32 or 64 bits in size, depending on the architecture.
+            </textarea>
+          </section>
+          <section data-markdown data-auto-animate>
+            <textarea data-template>
+              <h2>Signed Integers</h2>
+                Common Signed integers make use of a sign bit which dictates the sign of a number. This halves the maximum positive value but allows for negative values.
+
+                Unlike unsigned integers, signed integers are not direct representations of their bits and are instead an agreed upon standard.
+            </textarea>
+          </section>
+          <section data-auto-animate>
+            <h2>Signed Integers</h2>
+            <small>
+              <table>
+                <tr>
+                  <th>Binary</th>
+                  <th>Unsigned Integer Representation</th>
+                  <th>Signed Integer Representation</th>
+                </tr>
+                <tr>
+                  <td>11001010</td>
+                  <td>202</td>
+                  <td>-54</td>
+                </tr>
+                <tr>
+                  <td>01011010</td>
+                  <td>90</td>
+                  <td>90</td>
+                </tr>
+                <tr>
+                  <td>10010110</td>
+                  <td>150</td>
+                  <td>-106</td>
+                </tr>
+              </table>
+              <small>(uses 2's complement representation)</small>
+              <hr />
+              <pre>
+                <code id="c-representations" class="language-c"></code>
+                <script>
+                  let codeBlock = document.getElementById("c-representations");
+                  codeBlock.innerHTML = `
+                  #include "stdio.h"
+
+                  #define PRINT_BITS(x) print_bits(&(x), sizeof(x))
+
+                  void print_bits(const void *ptr, size_t size) {
+                    const unsigned char *b = ptr;
+
+                    for (int i = size - 1; i >= 0; --i)
+                      for (int j = 7; j >= 0; --j)
+                        putchar((b[i] >> j) & 1 ? '1' : '0');
+                    putchar('\\n');
+                  }
+
+                  int main() {
+                    char x = (1 << 7) | (1 << 4) | (1 << 2) | (1 << 1);
+                    PRINT_BITS(x);
+                    printf("%d\\n", x);
+                    printf("%u\\n", (unsigned char)x);
+                  }`;
+                </script>
+                </pre>
+            </small>
+          </section>
+          <section data-auto-animate-restart data-auto-animate data-markdown>
+            <textarea data-template>
+              ## Signed Integers
+
+              There are 3 different common representations of signed integers:
+              <ul>
+                <li class="fragment fade-right">Sign-Magnitude</li>
+                <li class="fragment fade-right">1's Complement</li>
+                <li class="fragment fade-right">2's Complement</li>
+                <li class="fragment fade-right">Offset Binary</li>
+              </ul>
+            </textarea>
+          </section>
+          <section data-auto-animate-restart data-auto-animate data-markdown>
+            <textarea data-template>
+              ## Sign-Magnitude
+
+              Sign-Magnitude uses a single most significant bit to represent the sign
+              of a number and the rest of the numbers dictate the magnitude.
+              <hr>
+              <div class="fragment">
+                <span class="red-color">1</span><span class="cyan-color">000110</span> = -6
+                <br>
+                <small>
+                    <span class="red-color">sign</span>
+                    <span c class="cyan-color">magnitude</span>
+                </small>
+              </div>
+            </textarea>
+          </section>
+          <section data-auto-animate data-markdown>
+            <textarea data-template>
+              ## Sign-Magnitude
+
+              This representation is outdated and suffers from flaws which complicate its implementation
+              <hr>
+              <ul>
+                <li class="fragment">
+                  <strong>Complex Implementation</strong>:
+                  <span class="fragment fade-right">
+                    Signed number addition requires a separate architecture than Unsigned numbers. On top of
+                    needing 2 different circuits to handle the positive and negative cases.
+                  </span>
+                </li>
+                <li class="fragment">
+                  <code>-0</code> <strong>Ambiguity</strong>:
+                  <span class="fragment fade-right">
+                  <code>00000000</code> and <code>10000000</code> are both representations of 0 and thus each
+                  is an explicit case that needs to be handled.
+                  </span>
+                </li>
+              </ul>
+            </textarea>
+          </section>
+          <section>
+            <h3><code>-0</code> <strong>Ambiguity</strong></h3>
+            Since 0 and -0 use different bits, they each use 1 state. Resulting
+            in 1's complement, resulting in a slightly lower range of numbers
+            <hr />
+            <table>
+              <tr>
+                <td>Unsigned</td>
+                <td>$[0, 2^n-1]$</td>
+              </tr>
+              <tr>
+                <td>Sign/Magnitude</td>
+                <td>$[-2^{n-1} + 1, 2^{n-1}-1]$</td>
+              </tr>
+              <tr>
+                <td>2's Complement</td>
+                <td>$[-2^{n-1}, 2^{n-1}-1]$</td>
+              </tr>
+            </table>
+          </section>
+          <section data-auto-animate-restart data-auto-animate data-markdown>
+            <textarea data-template>
+              ## 1's Complement
+
+              The negative of a number is represented as the complement of all its bits.
+              <hr>
+              <code>01011</code> = 11
+              <br>
+              <code>10100</code> = -11
+            </textarea>
+          </section>
+          <section data-auto-animate data-markdown>
+            <textarea data-template>
+              ## 1's Complement
+
+              This allows for the same binary addition for unsigned integers to be used.
+              Though slight modifications are needed for the ambigous 0 and the *end-around carry issue* 
+              <hr>
+              <div class="fragment">
+                  <code>00000000</code> and <code>11111111</code> are the same
+              </div>
+            </textarea>
+          </section>
+          <section data-auto-animate data-markdown>
+            <textarea data-template>
+              ## 1's Complement
+              End-around carry
+              <hr>
+              <div class="fragment two-column">
+                <div>
+                  $$
+                  \begin{aligned}
+                      1111011 \\
+                  +\, 0001000 \\
+                    \hline
+                    (1)\,0000011
+                  \end{aligned}
+                  $$
+                </div>
+                <div>
+                  $$
+                  \begin{aligned}
+                      -4 \\
+                  +\,  8 \\
+                  \hline
+                  3
+                  \end{aligned}
+                  $$
+                </div>
+              </div>
+              <small class="fragment">
+                Numbers have a fixed max size and causes the last bit to be ignored
+              </small>
+            </textarea>
+          </section>
+          <section data-auto-animate data-markdown>
+            <textarea data-template>
+              ## 1's Complement
+              Another addition then has to be done to handle the case where there is a carry bit
+              <hr>
+              <div class="fragment two-column">
+                <div>
+                  $$
+                  \begin{aligned}
+                      1111011 \\
+                  +\, 0001000 \\
+                    \hline
+                      0000011 \\
+                  +\, 0000001 \\
+                    \hline
+                      0000100
+                  \end{aligned}
+                  $$
+                </div>
+                <div>
+                  $$
+                  \begin{aligned}
+                      -4 \\
+                  +\,  8 \\
+                  \hline
+                       3 \\
+                  +\,  1 \\
+                  \hline
+                       4
+                  \end{aligned}
+                  $$
+                </div>
+              </div>
+            </textarea>
+          </section>
+          <section data-auto-animate-restart data-auto-animate data-markdown>
+            <textarea data-template>
+              ## 2's Complement
+
+              2's complement is the modern standard for integers. The negation of any number is
+              its complement plus 1. This representation does not need an end-around carry nor does
+              it have an ambigous 0.
+              <hr>
+            </textarea>
+          </section>
+          <section data-auto-animate-restart data-auto-animate data-markdown>
+            <textarea data-template>
+              ## Offset Binary
+              
+              Offset binary is the only signed number representation which doesnt have a sign bit at 
+              the most significant bit. Instead signed numbers are as themselves minus a number.
+              <br>
+              Another name for offset binary numbers are *Excess-K* where *K* is the offset
+            </textarea>
+          </section>
+          <section data-auto-animate data-markdown>
+            <textarea data-template>
+              ## Offset Binary
+             
+              Excess-127 for an 8-bit number:
+              <div>
+                <code>00000000</code> (0 - 128) = -128
+                <br>
+                <code>10110110</code> (182 - 128) = 54
+              </div>
+              <hr>
+              <div class="fragment">
+                Offset binary is mainly used in the exponent component of IEEE-754
+              </div>
+            </textarea>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Binary Arithmetic on Integers</h2>
+            <p>
+              Binary arithmetic is handled by the ALU. Binary circuits are just
+              logical circuits due to the simplicity of the number system.
+            </p>
+          </section>
+          <!-- prettier-ignore -->
+          <section data-auto-animate data-auto-animate-restart>
+            <h2>Binary Addition</h2>
+            Binary addition as it is implemented in the ALU uses long addition.
+            Adding each digit from least to most significant while carrying over
+            the excess.
+            <hr>
+            $$
+            \begin{array}{cccc}
+              & _1 & _1 &   \\
+              &  0 &  1 & 1 \\
+            + &  0 &  0 & 1 \\
+            \hline
+              &  1 &  0 & 0
+            \end{array}
+            $$
+          </section>
+          <section data-auto-animate data-auto-animate-restart>
+            <h2>Binary Addition</h2>
+            The addition of 2 binary digits, can be done using logic gates
+            <hr />
+            <div class="fragment two-column">
+              <div id="half-adder-equation">
+                $$ \begin{array}{cccc} & 0 \\ + & 0 \\ \hline _0 & 0 \end{array}
+                $$
+              </div>
+              <div>
+                <div id="half-adder" class="circuit-container"></div>
+                <script src="./slides/half-adder.js"></script>
+              </div>
+            </div>
+            <small class="fragment"> Logic gate inputs are interactible </small>
+          </section>
+          <section data-auto-animate data-auto-animate-restart>
+            <h2>Half-Adder</h2>
+            <div class="two-column">
+              <div class="scroll">
+                <div class="fragment">
+                  A Half-Adder takes 2 inputs $(a,b)$, and outputs a result $s$
+                  and a carry $c_{out}$
+                </div>
+                <div class="fragment">
+                  $$ \begin{array}{cc|cc} A & B & C_{out} & S \\ \hline 0 & 0 &
+                  0 & 0 \\ 0 & 1 & 0 & 1 \\ 1 & 0 & 0 & 1 \\ 1 & 1 & 1 & 0 \\
+                  \end{array} $$
+                </div>
+                <hr />
+                <div class="fragment">
+                  In a multi-bit adder $C_{out}$ is carried unto the next
+                  significant bit. However a half-adder lacks a $C_{in}$ to take
+                  the previous carry.
+                </div>
+              </div>
+              <div>
+                <div id="half-adder-equation-2">
+                  $$ \begin{array}{cccc} & 0 \\ + & 0 \\ \hline _0 & 0
+                  \end{array} $$
+                </div>
+                <div>
+                  <div id="half-adder-2" class="circuit-container"></div>
+                  <script src="./slides/half-addder-2.js"></script>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate-restart data-auto-animate>
+            <h2>Full Adder</h2>
+            <div class="two-column">
+              <div>
+                The issue with half-adders is they dont have an input for a
+                carry.
+                <hr />
+                <span class="fragment">
+                  Full adders implement a 3rd carry input $c_{in}$, allowing
+                  full adders to be sequenced to add any number of bits.
+                </span>
+              </div>
+              <div class="scroll fragment">
+                $$ \begin{array}{ccc|cc} a & b & c_{in} & s & c_{out} \\ \hline
+                0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 1 \\ 0 & 1 & 0 & 0 & 1 \\ 0
+                & 1 & 1 & 1 & 0 \\ 1 & 0 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 & 0 \\ 1 &
+                1 & 0 & 1 & 0 \\ 1 & 1 & 1 & 1 & 1 \\ \end{array} $$
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h2>Full Adder</h2>
+            A full adder accepts a previous carry input
+            <hr />
+            <div class="two-column">
+              <div>
+                <div id="full-adder" class="circuit-container"></div>
+                <script src="./slides/full-adder.js"></script>
+              </div>
+              <div id="full-adder-equation">
+                $$ \begin{array}{cc} & _0 \\ & 0 \\ + & 0 \\ \hline _0 & 0
+                \end{array} $$
+              </div>
+            </div>
+            <div class="fragment">
+              $c_{out}$ is routed to a subsequent full-adder
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h2>Full Adder</h2>
+            Alternate construction using half-adders
+            <hr />
+            <div>
+              <div id="full-adder-alt" class="circuit-container"></div>
+              <script src="./slides/full-adder-alt.js" type="module"></script>
+            </div>
+          </section>
+          <section data-auto-animate-restart>
+            <h2>Ripple Carry Adder</h2>
+            A carry propagate adder is a simple series of full adders
+            <hr />
+            <div>
+              <div id="carry-propagate" class="circuit-container"></div>
+              <script src="./slides/carry-propagate.js" type="module"></script>
+            </div>
+          </section>
+          <section data-auto-animate data-auto-animate-restart>
+            <h2>Subtraction</h2>
+            Subtraction of integers work by getting the 2's complement of an
+            operand.
+            <br />
+            <br />
+            This allows the same structure to be used for subtraction, only
+            requiring a 2's complement to be performed.
+          </section>
+          <section data-auto-animate>
+            <h2>Subtraction</h2>
+            <div class="two-column">
+              <div>
+                $$ \begin{array}{cc} & 0101 \\ - & 0011 \\ \hline \end{array} $$
+
+                <br />
+
+                $$ \begin{array}{cc} & 0101 \\ + & 1101 \\ \hline 1 & 0010
+                \end{array} $$
+              </div>
+              <div>
+                $$ \begin{array}{cc} & 5 \\ - & 3 \\ \hline & 2 \end{array} $$
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Multiplication and Division</h2>
+          </section>
+          <section>
+            <h2>Bit Shifts</h2>
+            <img src="./slides/circuits/shifts.png" alt="" />
+            <br />
+            <small>
+              A simple shift of bits from left to right. Shifting to left is
+              equivalent to multiplying by 2, and shifting to the right is
+              equivalent to dividing by 2.
+            </small>
+          </section>
+          <section>
+            <h2>Multiplication</h2>
+            Binary Multiplication works with long multiplication.
+
+            <div class="two-column">
+              <div>
+                $$ \begin{array}{cc} & 101 \\ \times & 011 \\ \hline & 0101\\ +
+                & 1010 \\ \hline & 1111 \end{array} $$
+              </div>
+              <div>
+                $$ \begin{array}{cc} & 5 \\ \times & 3 \\ \hline & 15\\
+                \end{array} $$
+
+                <small>
+                  An interesting quirk because of how binary functions, each
+                  addition is just a shifted repetition for every 1 in the
+                  multiplier
+                </small>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Division</h2>
+            <div class="two-column">
+              <div>
+                \[ \newcommand\longdiv[2]{%
+                \strut#1\kern.25em\smash{\raise.3ex\hbox{$\big)$}}\mkern-8mu\overline{\enspace\strut#2}}
+                \phantom{000}1001 \\ \longdiv{11}{11011} \\
+                \class{fragment}{\phantom{000|}\underline{11}\class{red-color}{000}}\\
+                \class{fragment}{\phantom{0000010}11} \\
+                \class{fragment}{\phantom{0000000}\underline{11}} \\
+                \class{fragment}{\phantom{00000000}0} \]
+              </div>
+              <div>
+                \[ \newcommand\longdiv[2]{%
+                \strut#1\kern.25em\smash{\raise.3ex\hbox{$\big)$}}\mkern-8mu\overline{\enspace\strut#2}}
+                \phantom{110 }111 \\ \longdiv{110}{101101} \\ \class{fragment}{
+                \phantom{000001}\underline{110\class{red-color}{00}} }\\
+                \class{fragment}{ \phantom{000000}10101 }\\ \class{fragment}{
+                \phantom{0000001}\underline{110\class{red-color}{0}} }\\
+                \class{fragment}{ \phantom{0000000}1001 }\\ \class{fragment}{
+                \phantom{00000001}\underline{110} }\\ \class{fragment}{
+                \phantom{000000010}\class{cyan-color}{11} }\\ \]
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Floating Point Numbers</h2>
+            Floating point numbers are the standard way to store arbitrary
+            precision real numbers.
+            <hr />
+            <div class="fragment">
+              The format of floating point numbers follow the IEEE 754 standard
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h2>IEEE-754</h2>
+            Structure of a 32-bit floating point number
+            <hr />
+            <code>
+              2.46 = <span class="red-color">0</span
+              ><span class="cyan-color">1000000</span
+              ><span class="magenta-color">000111010111000010100100</span>
+            </code>
+            <ul>
+              <li class="red-color">sign</li>
+              <li class="cyan-color">exponent</li>
+              <li class="magenta-color">mantissa/significand</li>
+            </ul>
+            <hr />
+            The number is internally stored as $1.23 \times 2^1$
+          </section>
+          <section data-auto-animate data-auto-animate-restart>
+            <h2>Exponent</h2>
+            <code>
+              <span class="">0</span><span class="cyan-color bold">1000000</span
+              ><span class="">000111010111000010100100</span>
+            </code>
+            <hr />
+            The exponent in a 32-bit float is a 8-bit offset-137 integer. The
+            exponent is the binary value of the exponent minus 127.
+            <br />
+            <code>
+              <span class="cyan-color bold">1000000</span> = 128 - 127 = 1
+            </code>
+            <small>
+              the $2 \times$ section of the floating point is implicitly implied
+            </small>
+          </section>
+          <section data-auto-animate data-auto-animate-restart>
+            <h2>Mantissa</h2>
+            <code data-id="mantissa">
+              <span class="">0</span><span class="">1000000</span
+              ><span class="magenta-color bold">000111010111000010100100</span>
+            </code>
+            <hr />
+            The mantissa is a 23-bit number containing the significand in
+            scientific notation
+            <hr />
+            Its bits represent a summation of binary fractions: $1 +
+            \frac{b_1}{2} + \frac{b_2}{4} + \frac{b_3}{8} + \frac{b_4}{16} ...$
+          </section>
+          <section data-auto-animate>
+            <h2>Mantissa</h2>
+            <code data-id="mantissa">
+              <span class="">0</span><span class="">1000000</span
+              ><span class="magenta-color bold">000111010111000010100100</span>
+            </code>
+            <hr />
+            The value of the mantissa is a standard fixed-point number:
+            <br />
+            <code>
+              1.<span class="magenta-color bold">000111010111000010100100</span>
+            </code>
+            <div class="fragment">
+              The initial <code>1.0</code> is implied, not physically stored.
+              Denormalized numbers instead uses <code>0.0</code>.
+            </div>
+          </section>
+          <section>
+            <h2>Special values</h2>
+            IEEE has specific reserved values
+            <ul>
+              <li>
+                <strong>Zero:</strong> Represented by a mantissa and exponent of
+                0. -0 and +0 are distinct numbers.
+              </li>
+              <li>
+                <strong>Denormalized:</strong> Also known as subnormal numbers,
+                have an exponent of 0 and a nonzero mantissa. It lacks an
+                explicit leading 1.
+              </li>
+              <li>
+                <strong>Infinity:</strong> Has an exponent of all 1s and
+                mantissa of all 0s.
+              </li>
+              <li>
+                <strong>NaN:</strong> Has an exponent of all 1s and a nonzero
+                mantissa, represents an error.
+              </li>
+            </ul>
           </section>
         </section>
       </div>
