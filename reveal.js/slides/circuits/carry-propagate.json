@@ -1,0 +1,1127 @@
+{
+  "devices": {
+    "dev0": {
+      "label": "a",
+      "type": "NumEntry",
+      "propagation": 0,
+      "numbase": "bin",
+      "bits": 4,
+      "net": "a",
+      "order": 0,
+      "position": {
+        "x": 12,
+        "y": 12
+      }
+    },
+    "dev1": {
+      "label": "b",
+      "type": "NumEntry",
+      "propagation": 0,
+      "numbase": "bin",
+      "bits": 4,
+      "net": "b",
+      "order": 1,
+      "position": {
+        "x": 12,
+        "y": 105
+      }
+    },
+    "dev2": {
+      "label": "sum",
+      "type": "NumDisplay",
+      "propagation": 0,
+      "numbase": "bin",
+      "bits": 4,
+      "net": "sum",
+      "order": 2,
+      "position": {
+        "x": 1058.4666633605957,
+        "y": 95
+      }
+    },
+    "dev3": {
+      "label": "fa0",
+      "type": "Subcircuit",
+      "propagation": 0,
+      "source_positions": [
+        {
+          "name": "Carry Propagate Adder.sv",
+          "from": {
+            "line": 28,
+            "column": 16
+          },
+          "to": {
+            "line": 28,
+            "column": 77
+          }
+        }
+      ],
+      "celltype": "full_adder",
+      "position": {
+        "x": 287,
+        "y": 92
+      }
+    },
+    "dev4": {
+      "label": "fa1",
+      "type": "Subcircuit",
+      "propagation": 0,
+      "source_positions": [
+        {
+          "name": "Carry Propagate Adder.sv",
+          "from": {
+            "line": 29,
+            "column": 16
+          },
+          "to": {
+            "line": 29,
+            "column": 77
+          }
+        }
+      ],
+      "celltype": "full_adder",
+      "position": {
+        "x": 447.1166658401489,
+        "y": 87
+      }
+    },
+    "dev5": {
+      "label": "fa2",
+      "type": "Subcircuit",
+      "propagation": 0,
+      "source_positions": [
+        {
+          "name": "Carry Propagate Adder.sv",
+          "from": {
+            "line": 30,
+            "column": 16
+          },
+          "to": {
+            "line": 30,
+            "column": 77
+          }
+        }
+      ],
+      "celltype": "full_adder",
+      "position": {
+        "x": 607.2333316802979,
+        "y": 205
+      }
+    },
+    "dev6": {
+      "label": "fa3",
+      "type": "Subcircuit",
+      "propagation": 0,
+      "source_positions": [
+        {
+          "name": "Carry Propagate Adder.sv",
+          "from": {
+            "line": 31,
+            "column": 16
+          },
+          "to": {
+            "line": 31,
+            "column": 86
+          }
+        }
+      ],
+      "celltype": "full_adder",
+      "position": {
+        "x": 767.3499975204468,
+        "y": 240
+      }
+    },
+    "dev7": {
+      "label": "",
+      "type": "BusGroup",
+      "propagation": 0,
+      "groups": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "position": {
+        "x": 927.4666633605957,
+        "y": 74
+      }
+    },
+    "dev8": {
+      "label": "",
+      "type": "Constant",
+      "propagation": 0,
+      "numbase": "hex",
+      "constant": "0",
+      "position": {
+        "x": 161,
+        "y": 152
+      }
+    },
+    "dev9": {
+      "label": "",
+      "type": "BusSlice",
+      "propagation": 0,
+      "slice": {
+        "first": 0,
+        "count": 1,
+        "total": 4
+      },
+      "position": {
+        "x": 156,
+        "y": 38
+      }
+    },
+    "dev10": {
+      "label": "",
+      "type": "BusSlice",
+      "propagation": 0,
+      "slice": {
+        "first": 0,
+        "count": 1,
+        "total": 4
+      },
+      "position": {
+        "x": 156,
+        "y": 108
+      }
+    },
+    "dev11": {
+      "label": "",
+      "type": "BusSlice",
+      "propagation": 0,
+      "slice": {
+        "first": 1,
+        "count": 1,
+        "total": 4
+      },
+      "position": {
+        "x": 301.55833292007446,
+        "y": 38
+      }
+    },
+    "dev12": {
+      "label": "",
+      "type": "BusSlice",
+      "propagation": 0,
+      "slice": {
+        "first": 1,
+        "count": 1,
+        "total": 4
+      },
+      "position": {
+        "x": 301.55833292007446,
+        "y": 180
+      }
+    },
+    "dev13": {
+      "label": "",
+      "type": "BusSlice",
+      "propagation": 0,
+      "slice": {
+        "first": 2,
+        "count": 1,
+        "total": 4
+      },
+      "position": {
+        "x": 461.6749987602234,
+        "y": 202
+      }
+    },
+    "dev14": {
+      "label": "",
+      "type": "BusSlice",
+      "propagation": 0,
+      "slice": {
+        "first": 2,
+        "count": 1,
+        "total": 4
+      },
+      "position": {
+        "x": 461.6749987602234,
+        "y": 246
+      }
+    },
+    "dev15": {
+      "label": "",
+      "type": "BusSlice",
+      "propagation": 0,
+      "slice": {
+        "first": 3,
+        "count": 1,
+        "total": 4
+      },
+      "position": {
+        "x": 621.7916646003723,
+        "y": 112
+      }
+    },
+    "dev16": {
+      "label": "",
+      "type": "BusSlice",
+      "propagation": 0,
+      "slice": {
+        "first": 3,
+        "count": 1,
+        "total": 4
+      },
+      "position": {
+        "x": 621.7916646003723,
+        "y": 281
+      }
+    }
+  },
+  "connectors": [
+    {
+      "from": {
+        "id": "dev0",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev9",
+        "port": "in"
+      },
+      "name": "a",
+      "vertices": [
+        {
+          "x": 106,
+          "y": 37
+        },
+        {
+          "x": 106,
+          "y": 40
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev0",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev11",
+        "port": "in"
+      },
+      "name": "a",
+      "vertices": [
+        {
+          "x": 227,
+          "y": 27
+        },
+        {
+          "x": 237,
+          "y": 37
+        },
+        {
+          "x": 237,
+          "y": 40
+        },
+        {
+          "x": 247,
+          "y": 50
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev0",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev13",
+        "port": "in"
+      },
+      "name": "a",
+      "vertices": [
+        {
+          "x": 106,
+          "y": 37
+        },
+        {
+          "x": 106,
+          "y": 204
+        },
+        {
+          "x": 116,
+          "y": 214
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev0",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev15",
+        "port": "in"
+      },
+      "name": "a",
+      "vertices": [
+        {
+          "x": 537.2333316802979,
+          "y": 27
+        },
+        {
+          "x": 547.2333316802979,
+          "y": 37
+        },
+        {
+          "x": 547.2333316802979,
+          "y": 114
+        },
+        {
+          "x": 557.2333316802979,
+          "y": 124
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev1",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev10",
+        "port": "in"
+      },
+      "name": "b"
+    },
+    {
+      "from": {
+        "id": "dev1",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev12",
+        "port": "in"
+      },
+      "name": "b",
+      "vertices": [
+        {
+          "x": 96,
+          "y": 130
+        },
+        {
+          "x": 96,
+          "y": 182
+        },
+        {
+          "x": 106,
+          "y": 192
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev1",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev14",
+        "port": "in"
+      },
+      "name": "b",
+      "vertices": [
+        {
+          "x": 96,
+          "y": 130
+        },
+        {
+          "x": 96,
+          "y": 248
+        },
+        {
+          "x": 106,
+          "y": 258
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev1",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev16",
+        "port": "in"
+      },
+      "name": "b",
+      "vertices": [
+        {
+          "x": 96,
+          "y": 130
+        },
+        {
+          "x": 96,
+          "y": 248
+        },
+        {
+          "x": 106,
+          "y": 258
+        },
+        {
+          "x": 377.1166658401489,
+          "y": 258
+        },
+        {
+          "x": 387.1166658401489,
+          "y": 268
+        },
+        {
+          "x": 387.1166658401489,
+          "y": 283
+        },
+        {
+          "x": 397.1166658401489,
+          "y": 293
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev7",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev2",
+        "port": "in"
+      },
+      "name": "sum"
+    },
+    {
+      "from": {
+        "id": "dev9",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev3",
+        "port": "a"
+      },
+      "vertices": [
+        {
+          "x": 227,
+          "y": 60
+        },
+        {
+          "x": 227,
+          "y": 91
+        },
+        {
+          "x": 237,
+          "y": 101
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev10",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev3",
+        "port": "b"
+      }
+    },
+    {
+      "from": {
+        "id": "dev8",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev3",
+        "port": "cin"
+      },
+      "vertices": [
+        {
+          "x": 227,
+          "y": 157
+        },
+        {
+          "x": 227,
+          "y": 149
+        },
+        {
+          "x": 237,
+          "y": 139
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev3",
+        "port": "cout"
+      },
+      "to": {
+        "id": "dev4",
+        "port": "cin"
+      },
+      "name": "c1"
+    },
+    {
+      "from": {
+        "id": "dev3",
+        "port": "sum"
+      },
+      "to": {
+        "id": "dev7",
+        "port": "in0"
+      },
+      "vertices": [
+        {
+          "x": 387.1166658401489,
+          "y": 96
+        },
+        {
+          "x": 387.1166658401489,
+          "y": 26
+        },
+        {
+          "x": 397.1166658401489,
+          "y": 16
+        },
+        {
+          "x": 857.4666633605957,
+          "y": 16
+        },
+        {
+          "x": 867.4666633605957,
+          "y": 26
+        },
+        {
+          "x": 867.4666633605957,
+          "y": 73
+        },
+        {
+          "x": 877.4666633605957,
+          "y": 83
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev11",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev4",
+        "port": "a"
+      },
+      "vertices": [
+        {
+          "x": 387.1166658401489,
+          "y": 50
+        },
+        {
+          "x": 397.1166658401489,
+          "y": 60
+        },
+        {
+          "x": 397.1166658401489,
+          "y": 86
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev12",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev4",
+        "port": "b"
+      },
+      "vertices": [
+        {
+          "x": 377.1166658401489,
+          "y": 192
+        },
+        {
+          "x": 387.1166658401489,
+          "y": 182
+        },
+        {
+          "x": 387.1166658401489,
+          "y": 125
+        },
+        {
+          "x": 397.1166658401489,
+          "y": 115
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev4",
+        "port": "cout"
+      },
+      "to": {
+        "id": "dev5",
+        "port": "cin"
+      },
+      "name": "c2",
+      "vertices": [
+        {
+          "x": 557.2333316802979,
+          "y": 139
+        },
+        {
+          "x": 557.2333316802979,
+          "y": 242
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev4",
+        "port": "sum"
+      },
+      "to": {
+        "id": "dev7",
+        "port": "in1"
+      }
+    },
+    {
+      "from": {
+        "id": "dev13",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev5",
+        "port": "a"
+      }
+    },
+    {
+      "from": {
+        "id": "dev14",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev5",
+        "port": "b"
+      },
+      "vertices": [
+        {
+          "x": 537.2333316802979,
+          "y": 258
+        },
+        {
+          "x": 547.2333316802979,
+          "y": 248
+        },
+        {
+          "x": 547.2333316802979,
+          "y": 243
+        },
+        {
+          "x": 557.2333316802979,
+          "y": 233
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev5",
+        "port": "cout"
+      },
+      "to": {
+        "id": "dev6",
+        "port": "cin"
+      },
+      "name": "c3",
+      "vertices": [
+        {
+          "x": 707.3499975204468,
+          "y": 257
+        },
+        {
+          "x": 707.3499975204468,
+          "y": 277
+        },
+        {
+          "x": 717.3499975204468,
+          "y": 287
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev5",
+        "port": "sum"
+      },
+      "to": {
+        "id": "dev7",
+        "port": "in2"
+      },
+      "vertices": [
+        {
+          "x": 857.4666633605957,
+          "y": 219
+        },
+        {
+          "x": 867.4666633605957,
+          "y": 209
+        },
+        {
+          "x": 867.4666633605957,
+          "y": 129
+        },
+        {
+          "x": 877.4666633605957,
+          "y": 119
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev15",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev6",
+        "port": "a"
+      },
+      "vertices": [
+        {
+          "x": 707.3499975204468,
+          "y": 124
+        },
+        {
+          "x": 717.3499975204468,
+          "y": 134
+        },
+        {
+          "x": 717.3499975204468,
+          "y": 239
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev16",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev6",
+        "port": "b"
+      },
+      "vertices": [
+        {
+          "x": 707.3499975204468,
+          "y": 293
+        },
+        {
+          "x": 717.3499975204468,
+          "y": 283
+        },
+        {
+          "x": 717.3499975204468,
+          "y": 278
+        }
+      ]
+    },
+    {
+      "from": {
+        "id": "dev6",
+        "port": "sum"
+      },
+      "to": {
+        "id": "dev7",
+        "port": "in3"
+      },
+      "vertices": [
+        {
+          "x": 877.4666633605957,
+          "y": 244
+        },
+        {
+          "x": 877.4666633605957,
+          "y": 147
+        }
+      ]
+    }
+  ],
+  "subcircuits": {
+    "full_adder": {
+      "devices": {
+        "dev0": {
+          "label": "",
+          "type": "Input",
+          "propagation": 0,
+          "numbase": "hex",
+          "bits": 1,
+          "net": "a",
+          "order": 0
+        },
+        "dev1": {
+          "label": "",
+          "type": "Input",
+          "propagation": 0,
+          "numbase": "hex",
+          "bits": 1,
+          "net": "b",
+          "order": 1
+        },
+        "dev2": {
+          "label": "",
+          "type": "Input",
+          "propagation": 0,
+          "numbase": "hex",
+          "bits": 1,
+          "net": "cin",
+          "order": 2
+        },
+        "dev3": {
+          "label": "",
+          "type": "Output",
+          "propagation": 0,
+          "numbase": "hex",
+          "bits": 1,
+          "net": "sum",
+          "order": 3
+        },
+        "dev4": {
+          "label": "",
+          "type": "Output",
+          "propagation": 0,
+          "numbase": "hex",
+          "bits": 1,
+          "net": "cout",
+          "order": 4
+        },
+        "dev5": {
+          "label": "$and$Carry$20Propagate$20Adder.sv:12$2",
+          "type": "And",
+          "propagation": 1,
+          "source_positions": [
+            {
+              "name": "Carry Propagate Adder.sv",
+              "from": {
+                "line": 12,
+                "column": 16
+              },
+              "to": {
+                "line": 12,
+                "column": 21
+              }
+            }
+          ],
+          "bits": 1,
+          "inputs": 2
+        },
+        "dev6": {
+          "label": "$and$Carry$20Propagate$20Adder.sv:15$4",
+          "type": "And",
+          "propagation": 1,
+          "source_positions": [
+            {
+              "name": "Carry Propagate Adder.sv",
+              "from": {
+                "line": 15,
+                "column": 24
+              },
+              "to": {
+                "line": 15,
+                "column": 31
+              }
+            }
+          ],
+          "bits": 1,
+          "inputs": 2
+        },
+        "dev7": {
+          "label": "$or$Carry$20Propagate$20Adder.sv:15$5",
+          "type": "Or",
+          "propagation": 1,
+          "source_positions": [
+            {
+              "name": "Carry Propagate Adder.sv",
+              "from": {
+                "line": 15,
+                "column": 19
+              },
+              "to": {
+                "line": 15,
+                "column": 32
+              }
+            }
+          ],
+          "bits": 1,
+          "inputs": 2
+        },
+        "dev8": {
+          "label": "$xor$Carry$20Propagate$20Adder.sv:11$1",
+          "type": "Xor",
+          "propagation": 1,
+          "source_positions": [
+            {
+              "name": "Carry Propagate Adder.sv",
+              "from": {
+                "line": 11,
+                "column": 16
+              },
+              "to": {
+                "line": 11,
+                "column": 21
+              }
+            }
+          ],
+          "bits": 1,
+          "inputs": 2
+        },
+        "dev9": {
+          "label": "$xor$Carry$20Propagate$20Adder.sv:14$3",
+          "type": "Xor",
+          "propagation": 1,
+          "source_positions": [
+            {
+              "name": "Carry Propagate Adder.sv",
+              "from": {
+                "line": 14,
+                "column": 19
+              },
+              "to": {
+                "line": 14,
+                "column": 26
+              }
+            }
+          ],
+          "bits": 1,
+          "inputs": 2
+        }
+      },
+      "connectors": [
+        {
+          "from": {
+            "id": "dev0",
+            "port": "out"
+          },
+          "to": {
+            "id": "dev5",
+            "port": "in1"
+          },
+          "name": "a"
+        },
+        {
+          "from": {
+            "id": "dev0",
+            "port": "out"
+          },
+          "to": {
+            "id": "dev8",
+            "port": "in1"
+          },
+          "name": "a"
+        },
+        {
+          "from": {
+            "id": "dev1",
+            "port": "out"
+          },
+          "to": {
+            "id": "dev5",
+            "port": "in2"
+          },
+          "name": "b"
+        },
+        {
+          "from": {
+            "id": "dev1",
+            "port": "out"
+          },
+          "to": {
+            "id": "dev8",
+            "port": "in2"
+          },
+          "name": "b"
+        },
+        {
+          "from": {
+            "id": "dev2",
+            "port": "out"
+          },
+          "to": {
+            "id": "dev6",
+            "port": "in2"
+          },
+          "name": "cin"
+        },
+        {
+          "from": {
+            "id": "dev2",
+            "port": "out"
+          },
+          "to": {
+            "id": "dev9",
+            "port": "in2"
+          },
+          "name": "cin"
+        },
+        {
+          "from": {
+            "id": "dev9",
+            "port": "out"
+          },
+          "to": {
+            "id": "dev3",
+            "port": "in"
+          },
+          "name": "sum"
+        },
+        {
+          "from": {
+            "id": "dev7",
+            "port": "out"
+          },
+          "to": {
+            "id": "dev4",
+            "port": "in"
+          },
+          "name": "cout"
+        },
+        {
+          "from": {
+            "id": "dev5",
+            "port": "out"
+          },
+          "to": {
+            "id": "dev7",
+            "port": "in1"
+          },
+          "name": "g"
+        },
+        {
+          "from": {
+            "id": "dev8",
+            "port": "out"
+          },
+          "to": {
+            "id": "dev6",
+            "port": "in1"
+          },
+          "name": "p"
+        },
+        {
+          "from": {
+            "id": "dev8",
+            "port": "out"
+          },
+          "to": {
+            "id": "dev9",
+            "port": "in1"
+          },
+          "name": "p"
+        },
+        {
+          "from": {
+            "id": "dev6",
+            "port": "out"
+          },
+          "to": {
+            "id": "dev7",
+            "port": "in2"
+          }
+        }
+      ]
+    }
+  }
+}
